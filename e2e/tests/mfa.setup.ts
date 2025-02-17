@@ -1,0 +1,24 @@
+import { test as setup } from "@playwright/test";
+import { AuthFile } from "../constants/AuthFile";
+import { existsSync } from "fs";
+import { login } from "playwright-m365-helpers";
+
+/**
+ * Login to Microsoft 365
+ * More info: https://playwright.dev/docs/auth
+ */
+setup("authenticate", async ({ page }) => {
+  if (existsSync(AuthFile)) {
+    return;
+  }
+
+  await login(
+    page,
+    process.env.M365_PAGE_URL,
+    process.env.M365_USERNAME,
+    process.env.M365_PASSWORD,
+    process.env.M365_OTP_SECRET
+  );
+
+  await page.context().storageState({ path: AuthFile });
+});

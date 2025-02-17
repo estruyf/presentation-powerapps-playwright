@@ -1,0 +1,30 @@
+{
+  "name": "testing-microsoft365-playwright",
+  "description": "E2E Testing of Microsoft 365 solutions with Playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "generate:otp": "node ./scripts/get-otp.mjs",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug"
+  },
+  "keywords": [
+    "testing",
+    "microsoft365",
+    "playwright",
+    "e2e"
+  ],
+  "author": "Elio Struyf <elio@struyfconsulting.be>",
+  "license": "MIT",
+  "dependencies": {
+    "@estruyf/github-actions-reporter": "^1.8.0",
+    "@playwright/test": "^1.50.1",
+    "dotenv": "^16.3.1",
+    "otpauth": "^9.3.1",
+    "playwright-m365-helpers": "^0.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12"
+  }
+}
