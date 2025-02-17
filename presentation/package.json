@@ -1,0 +1,16 @@
+{
+  "name": "presentation",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "0.50.0",
+    "@slidev/theme-default": "^0.25.0",
+    "slidev-theme-monomi": "^0.0.6",
+    "vue": "^3.5.13"
+  }
+}
