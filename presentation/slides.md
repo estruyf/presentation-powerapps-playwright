@@ -4,6 +4,9 @@ title: Ensure quality in Power Apps by integrating automated testing with Playwr
 
 themeConfig:
   code-padding: "0"
+
+addons:
+  - slidev-addon-demotime
 ---
 
 # Ensure quality in Power Apps by integrating automated testing with Playwright
@@ -15,10 +18,20 @@ src: ./pages/hello.md
 ---
 
 ---
+src: ./pages/sponsors.md
+---
+
+---
 layout: section
 ---
 
 # Low-code != No testing
+
+---
+layout: fact
+---
+
+# 🤷‍♀️ 🤷‍♂️
 
 ---
 layout: section-left
@@ -76,10 +89,10 @@ invert: true
 
 # Options for testing Power Apps
 
-- Manual Testing
+- Manual testing
 - Test Studio
 - Test Engine
-- Other tools 👉 Playwright
+- Other tools → Playwright
 
 ---
 
@@ -127,6 +140,7 @@ Playwright enables reliable end-to-end testing for modern web apps.
 
 ## The good
 
+- No Power Fx 😜
 - Became a standard
 - Cross-browser / cross-platform / cross-language
 - Full control over tests and scripts
@@ -190,38 +204,12 @@ invert: true
 ---
 layout: section
 invert: true
+clicks: 1
 ---
 
 # The app to test
 
----
-layout: fact
-invert: true
----
-
-# AUTH
-
----
-
-# The options
-
-```mermaid
-flowchart LR
-  a["Playwright authentication"]
-  b["Using Time-based One-Time Password (TOPT)"]
-  c["Using an authenticated state"]
-  d["Start testing"]
-
-  a --> b
-  a --> c
-  b --> d
-  c --> d
-```
-
-References:
-
-- [Using MFA](https://www.eliostruyf.com/automating-microsoft-365-login-mfa-playwright-tests/)
-- [Using an auth session](https://www.eliostruyf.com/e2e-testing-mfa-environment-playwright-auth-session/)
+<demotime click="1" id="open_power_app" />
 
 ---
 layout: section
@@ -315,6 +303,47 @@ await expect(locator).toHaveCount(5);
   }
 </style>
 
+
+---
+layout: fact
+invert: true
+---
+
+# 👮‍♀️
+
+---
+layout: fact
+invert: true
+---
+
+# AUTH
+
+---
+clicks: 1
+---
+
+# The options
+
+```mermaid
+flowchart LR
+  a["Playwright authentication"]
+  b["Using Time-based One-Time Password (TOPT)"]
+  c["Using an authenticated state"]
+  d["Start testing"]
+
+  a --> b
+  a --> c
+  b --> d
+  c --> d
+```
+
+References:
+
+- [Using MFA](https://www.eliostruyf.com/automating-microsoft-365-login-mfa-playwright-tests/)
+- [Using an auth session](https://www.eliostruyf.com/e2e-testing-mfa-environment-playwright-auth-session/)
+
+<demotime click="1" id="open_auth" />
+
 ---
 layout: fact
 invert: true
@@ -340,27 +369,30 @@ invert: true
 
 # The canvas (read iframe)
 
-![](./powerapps-elements/the-canvas.png)
+![](/powerapps-elements/the-canvas.png)
 
 ---
 
-![](./powerapps-elements/element.png)
+![](/powerapps-elements/element.png)
 
 ---
 
-![](./powerapps-elements/element-selection.png)
+![](/powerapps-elements/element-selection.png)
 
 ---
 
 # Retrieving an element
 
 ```ts
+// Get the iframe canvas
 const iframe = page.frameLocator("iframe#fullscreen-app-host");
 const publishedCanvas = iframe.locator("#publishedCanvas");
 
+// Retrieve the control to test/use
 const textInputControl = publishedCanvas.locator(`div[data-control-name='TextInput1']`);
 const textInput = textInputControl.locator("input");
 
+// Use the control
 await textInput.fill("Hello World");
 ```
 
@@ -380,12 +412,19 @@ layout: section
 # `playwright-m365-helpers`
 
 ---
+clicks: 1
+---
 
 # Using the Playwright helpers
 
 ```ts
+// Get the iframe canvas
 const appFrame = await getAppFrame(page);
+
+// Retrieve the control to test/use
 const textInput = getInput(appFrame, "TextInput1");
+
+// Use the control
 await textInput.fill("Hello World");
 ```
 
@@ -395,6 +434,8 @@ await textInput.fill("Hello World");
     line-height: 22px !important;
   }
 </style>
+
+<demotime click="1" id="start_tests_and_open" />
 
 ---
 layout: fact
@@ -406,22 +447,41 @@ layout: fact
 layout: fact
 ---
 
+# 🐸 → 💋 → 🤴
+
+---
+layout: fact
+---
+
+# 🐸 → 💋 → 💩
+
+---
+layout: fact
+---
+
 # 🎭 Mock your connectors
 
 ---
 
-# Power Apps Connectors are APIs 🤯
+# Power Apps Connectors are ... APIs 🤯
 
-![](./connectors/api-hub-connector-call.webp)
+![](/connectors/api-hub-connector-call.webp)
 
 ---
 
 # Look into the headers 🕵
 
-![](./connectors/custom-api-call.webp)
+![](/connectors/custom-api-call.webp)
 
-![](./connectors/sharepoint-fetch-items.webp)
+![](/connectors/sharepoint-fetch-items.webp)
 
+<v-click>
+  <Arrow v-bind="{ x1:225, y1:225, x2:410, y2:165, color: '#FF004C' }" />
+  <Arrow v-bind="{ x1:225, y1:275, x2:330, y2:250, color: '#FF004C' }" />
+</v-click>
+
+---
+clicks: 1
 ---
 
 # 🎭 Mock a connector
@@ -447,8 +507,81 @@ await mockConnector(
   }
 </style>
 
+<demotime click="1" id="mocking_your_connector" />
+
+---
+layout: fact
+invert: true
+---
+
+![](/best-practices.png)
+
 ---
 layout: fact
 ---
 
 # Naming conventions
+
+---
+
+# Give meaningful names to screens and controls
+
+- Default names like `Button1`, `Screen2`, or `Label3` make test scripts hard to read.
+- Use descriptive, stable names:
+
+  ✅ `SubmitButton`, `LoginScreen`, `UserEmailInput`
+
+---
+layout: fact
+---
+
+# Test on Test
+
+---
+layout: fact
+---
+
+# Mock your connectors to make your tests more reliable
+
+---
+layout: fact
+---
+
+# ⛓️‍💥 Break it! 
+
+---
+layout: fact
+---
+
+# 🚀 Shipping == Testing
+
+---
+layout: fact
+---
+
+# 🔮 The future
+
+---
+
+# Next steps
+
+- Automating CI/CD
+- Reporting on CI/CD, mail, or MS Teams
+- Scheduled tests
+- ...
+
+<br />
+
+Refrences:
+
+- [playwright-mail-reporter](https://www.npmjs.com/package/playwright-mail-reporter)
+- [playwright-msteams-reporter](https://www.npmjs.com/package/playwright-msteams-reporter)
+- [github-actions-reporter](https://www.npmjs.com/package/@estruyf/github-actions-reporter)
+
+---
+src: ./pages/thanks.md
+---
+
+---
+src: ./pages/end.md
+---

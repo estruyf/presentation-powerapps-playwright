@@ -1,0 +1,99 @@
+{
+  "$schema": "https://demotime.elio.dev/demo-time.schema.json",
+  "title": "Showing tests",
+  "description": "",
+  "demos": [
+    {
+      "id": "start_tests_and_open",
+      "title": "Start tests and open",
+      "description": "",
+      "steps": [
+        {
+          "action": "executeTerminalCommand",
+          "command": "cd e2e && npm run test:ui"
+        },
+        {
+          "action": "open",
+          "path": "e2e/tests/powerapps.spec.ts"
+        },
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "26:34"
+        }
+      ]
+    },
+    {
+      "title": "Check canvas",
+      "description": "",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "40:42"
+        }
+      ]
+    },
+    {
+      "title": "Check label",
+      "description": "",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "44:49"
+        }
+      ]
+    },
+    {
+      "title": "Check input",
+      "description": "",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "51:57"
+        }
+      ]
+    },
+    {
+      "title": "Check button",
+      "description": "",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "59:65"
+        }
+      ]
+    },
+    {
+      "title": "Check dropdown",
+      "description": "",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "67:76"
+        }
+      ]
+    },
+    {
+      "title": "Open slides",
+      "description": "",
+      "icons": {
+        "start": "vm",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "snippet",
+          "contentPath": "/snippets/show_slide.json",
+          "args": {
+            "SLIDES_URL": "http://localhost:3030/33"
+          }
+        }
+      ]
+    }
+  ]
+}

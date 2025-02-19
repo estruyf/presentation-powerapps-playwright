@@ -1,4 +1,4 @@
 ---
 layout: image
-image: event/sponsors.png
+image: bootcamp/sponsors.png
 ---

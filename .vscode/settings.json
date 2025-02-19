@@ -1,5 +1,11 @@
 {
   "[markdown]": {
     "editor.formatOnSave": false
-  }
+  },
+  "demoTime.api.enabled": true,
+  "demoTime.highlightBorderColor": "transparent",
+  "demoTime.highlightBackground": "#ffd43b66",
+  "demoTime.highlightOpacity": 0.5,
+  "demoTime.highlightBlur": 2,
+  "demoTime.highlightZoomEnabled": 1
 }

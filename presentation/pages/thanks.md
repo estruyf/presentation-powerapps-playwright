@@ -6,7 +6,7 @@ helloMsg: Thank you!
 name: Elio Struyf
 imageSrc: https://elio.dev/eliostruyf_2024_bw_cutout.png
 imageStyle: "background-position: center bottom; background-size: cover;"
-job: Struyf Consulting
+job: "Struyf Consulting → #OpenForWork"
 line1: "#Stickerpreneur @ pyod.shop"
 line2: "#Maintainer @ Front Matter CMS"
 social1: "🦋 eliostruyf.com"

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://demotime.elio.dev/demo-time.schema.json",
+  "title": "Mocking",
+  "description": "",
+  "demos": [
+    {
+      "id": "mocking_your_connector",
+      "title": "Mocking your connector",
+      "description": "",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "101:109"
+        }
+      ]
+    },
+    {
+      "title": "Open mock",
+      "description": "",
+      "steps": [
+        {
+          "action": "open",
+          "path": "e2e/mocks/inventoryItems.ts"
+        }
+      ]
+    },
+    {
+      "title": "Wait for a response",
+      "description": "",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "101:109"
+        },
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "169:174"
+        }
+      ]
+    },
+    {
+      "title": "Create a sticker",
+      "description": "",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "101:109"
+        },
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "280:287"
+        }
+      ]
+    },
+    {
+      "title": "Provide the data to the form",
+      "description": "",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "289:300"
+        }
+      ]
+    },
+    {
+      "title": "Mock the request",
+      "description": "",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/powerapps.spec.ts",
+          "position": "303:319"
+        }
+      ]
+    }
+  ]
+}

@@ -11,9 +11,9 @@ import {
   getRadioOptions,
   getScreen,
   getToggle,
-  mockConnector,
   selectDropdownOption,
   selectRadioOption,
+  mockConnector,
   waitForConnectorResponse,
 } from "playwright-m365-helpers";
 import { inventoryItems } from "../mocks/inventoryItems";

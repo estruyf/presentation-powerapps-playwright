@@ -1,0 +1,69 @@
+{
+  "$schema": "https://demotime.elio.dev/demo-time.schema.json",
+  "title": "Getting started",
+  "description": "",
+  "demos": [
+    {
+      "title": "Open slides",
+      "description": "",
+      "icons": {
+        "start": "vm",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "snippet",
+          "contentPath": "/snippets/show_slide.json",
+          "args": {
+            "SLIDES_URL": "http://localhost:3030"
+          }
+        }
+      ]
+    },
+    {
+      "id": "open_power_app",
+      "title": "Open Power App",
+      "description": "",
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "vscode.open",
+          "args": "https://apps.powerapps.com/play/e/default-b32d3268-2794-435f-865f-ab4779cae11e/a/b376228f-64c7-4b52-a688-8ec9d089b4ad?tenantId=b32d3268-2794-435f-865f-ab4779cae11e&hint=cc0daac2-007f-4a4d-bcdc-ddd49dcbfe69&sourcetime=1729778243107"
+        }
+      ]
+    },
+    {
+      "id": "open_auth",
+      "title": "Open auth",
+      "description": "",
+      "steps": [
+        {
+          "action": "open",
+          "path": "e2e/tests/mfa.setup.ts"
+        },
+        {
+          "action": "highlight",
+          "path": "/e2e/tests/mfa.setup.ts",
+          "position": "15:21"
+        }
+      ]
+    }
+    {
+      "title": "Open slides",
+      "description": "",
+      "icons": {
+        "start": "vm",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "snippet",
+          "contentPath": "/snippets/show_slide.json",
+          "args": {
+            "SLIDES_URL": "http://localhost:3030/24"
+          }
+        }
+      ]
+    }
+  ]
+}

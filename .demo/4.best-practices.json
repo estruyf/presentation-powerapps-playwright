@@ -1,0 +1,24 @@
+{
+  "$schema": "https://demotime.elio.dev/demo-time.schema.json",
+  "title": "Best practices",
+  "description": "",
+  "demos": [
+    {
+      "title": "Open slides",
+      "description": "",
+      "icons": {
+        "start": "vm",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "snippet",
+          "contentPath": "/snippets/show_slide.json",
+          "args": {
+            "SLIDES_URL": "http://localhost:3030/40"
+          }
+        }
+      ]
+    }
+  ]
+}
